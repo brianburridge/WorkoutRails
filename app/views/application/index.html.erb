@@ -1,0 +1,55 @@
+<div class="container">
+  <div id="chart-entry">
+    <h1>Gym Weight Lifting Chart</h1>
+
+    <form id="exercise-values">
+      <ul>
+        <li>
+          <label for="exercise-name">Exercise Name</label>
+          <input type="text" name="exercise-name" id="exercise-name" class="watch-for-change" size="100">
+        </li>
+        <li>
+          <label for="one-rep-max">One Rep Max</label>
+          <input type="text" name="one-rep-max" id="one-rep-max" class="watch-for-change">
+
+          <label for="reps">Reps</label>
+          <input type="text" name="reps" id="reps" class="watch-for-change">
+          <label for="rep-weight">Weight</label>
+          <input type="text" name="rep-weight" id="rep-weight" class="watch-for-change">
+        </li>
+        <li>
+          <label for="machine-weight">Machine Weight</label>
+          <input type="text" name="machine-weight" id="machine-weight" class="watch-for-change">
+
+          <input type="checkbox" name="split" id="split" class="watch-for-change extra-left-padding">
+          <label for="dumbbell">Split</label>
+        </li>
+      </ul>
+      <table id="chart" class="table table-bordered table-striped">
+        <tr class="header">
+          <th>Repetitions</th>
+          <th>S.O.F.</th>
+          <th>Total Weight</th>
+          <th>Weight to Add</th>
+          <th>Split</th>
+        </tr>
+      </table>
+
+      <input type="button" value="Add Exercise" class="btn btn-primary" id="add">
+    </form>
+  </div>
+  <h2>Today's Workout</h2><button class="btn btn-primary btn-link" type="button" id="print-workout">Print Workout</button>
+  <table id="todays-workout" class="table table-bordered table-striped">
+    <thead>
+    <tr class="header">
+      <th>Repetitions</th>
+      <th>Total Weight</th>
+      <th>Weight to Add</th>
+      <th>Split</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div> <!-- /container -->
+

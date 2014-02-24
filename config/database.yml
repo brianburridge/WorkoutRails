@@ -1,0 +1,24 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: workout_development
+  host: localhost
+<% if ENV['GHOME'] %>
+  port: 15432
+<% else %>
+  port: 5432
+<% end %>
+  template: template0
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: workout_test
+  host: localhost
+  min_messages: WARNING
+<% if ENV['GHOME'] %>
+  port: 15432
+<% else %>
+  port: 5432
+<% end %>
+  template: template0

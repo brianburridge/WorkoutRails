@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -e
+export CC=gcc
+
+script/bootstrap
+
+echo "===> Setting up DB..."
+bin/rake db:drop
+bin/rake db:create
+bin/rake db:migrate
+
+echo "==> Importing seed data…"
+bin/rake db:seed
+
+echo "==> Workout is now ready to go!"
+echo ""
+echo "==============================================="
+echo ""
+echo "Bootstrap complete!"
+echo ""

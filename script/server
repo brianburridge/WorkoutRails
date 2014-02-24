@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+script/update
+
+test -f .env || {
+  echo "You need a .env file present! Currently missing one. Run boxen workout and try again."
+  exit 1
+}
+
+test -z "$GH_SOCKET_DIR" && {
+  echo "Can't start: GH_SOCKET_DIR isn't set."
+  exit 1
+}
+
+test -z "$RACK_ENV" &&
+  RACK_ENV='development'
+
+RAILS_ENV=$RACK_ENV bin/unicorn_rails -E $RACK_ENV -c config/unicorn.rb

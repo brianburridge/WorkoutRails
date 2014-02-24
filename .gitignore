@@ -1,0 +1,17 @@
+*.DS_Store
+*.bundle
+*.o
+/.bundle
+/.ruby-version
+/repositories
+/bin/*
+db/*.sqlite3
+dump.rdb
+/log/*.log
+tmp/
+tmp/repos
+vendor/gems
+.env
+public/assets
+/.idea
+/.env

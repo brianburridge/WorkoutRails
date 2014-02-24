@@ -1,0 +1,34 @@
+#!/bin/sh
+
+set -e
+[ -z "$DEBUG" ] || set -x
+
+
+if [ "$RAILS_ENV" = "test" ] || [ "$RACK_ENV" = "test" ]; then
+  echo "===> Running tests..."
+  TEST_QUEUE_WORKERS=4
+
+  if [ -f /proc/cpuinfo ]; then
+    TEST_QUEUE_WORKERS=$(cat /proc/cpuinfo | grep processor | wc -l)
+  else
+    TEST_QUEUE_WORKERS=$(/usr/sbin/sysctl -n hw.activecpu)
+  fi
+
+  export TEST_QUEUE_WORKERS
+
+  script/setup
+
+  exec bundle exec script/test-queue --format progress spec
+
+else
+  export RAILS_ENV="test" RACK_ENV="test"
+
+  script/update
+
+  echo "===> Running tests..."
+  if [ $# -ne 0 ]; then
+    bin/rspec "$@"
+  else
+    bin/rspec spec
+  fi
+fi

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+export CC=gcc
+
+script/bootstrap
+
+echo "==> Updating db..."
+bin/rake db:create db:migrate
