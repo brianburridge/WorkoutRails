@@ -10,7 +10,7 @@
         </li>
         <li>
           <label for="exercise-name">Exercise Name</label>
-          <input type="text" name="exercise-name" id="exercise-name" class="watch-for-change" size="100">
+          <%= select("post", "exercise-name", @exercises.collect {|p| [ p.name, p.id ] }, { include_blank: true, :class => "watch-for-change" }) %>
         </li>
         <li>
           <label for="one-rep-max">One Rep Max</label>
@@ -18,7 +18,7 @@
 
           <label for="reps">Reps</label>
           <input type="text" name="reps" id="reps" class="watch-for-change">
-          <label for="rep-weight">Weight</label>
+          <label for="rep-weight">Weight Per Rep</label>
           <input type="text" name="rep-weight" id="rep-weight" class="watch-for-change">
         </li>
         <li>

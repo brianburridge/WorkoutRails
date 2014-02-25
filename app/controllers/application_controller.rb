@@ -5,5 +5,6 @@ class ApplicationController < ActionController::Base
 
   def index
     @users = User.all
+    @exercises = Exercise.order("name asc")
   end
 end
