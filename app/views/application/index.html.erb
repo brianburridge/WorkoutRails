@@ -5,6 +5,10 @@
     <form id="exercise-values">
       <ul>
         <li>
+          <label for="user">User</label>
+          <%= select("post", "user_id", @users.collect {|p| [ p.first_name, p.id ] }, { include_blank: true }) %>
+        </li>
+        <li>
           <label for="exercise-name">Exercise Name</label>
           <input type="text" name="exercise-name" id="exercise-name" class="watch-for-change" size="100">
         </li>
