@@ -5,8 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+if User.count==0
 User.create(first_name: 'Brian')
 User.create(first_name: 'Brandon')
+end
 
 # name, machine weight, split, record per dumbbell
 exercises = [
@@ -24,7 +26,11 @@ exercises = [
     ["Smith Incline Bench Press", 15, true, false],
     ["Smith Flat Press", 15, true, false],
     ["Dumbbell Flat Press", 0, true, false],
-    ["Dumbbell Press No Arc", 0, true, false]
+    ["Dumbbell Press No Arc", 0, true, false],
+    ["Barbell Upright Rows", 30, true, false],
+    ["Rear Delt Dumbbell Flyes", 0, true, false],
+    ["Seated Dumbbell Shoulder Press", 0, true, false],
+    ["Dumbbell Lateral Raise - Full Range", 0, true, false]
 ]
 exercises.each do |exercise|
   Exercise.create(name: exercise[0], machine_weight: exercise[1], split: exercise[2], record_per_dumbbell: exercise[3])

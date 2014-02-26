@@ -14,7 +14,7 @@ $('#print-workout').click(function () {
     $('#chart-entry').toggle();
 })
 $('input#add').click(function () {
-    $('#todays-workout > tbody').append('<tr><td colspan="4" class="title">'+$('#exercise-name').val() + '</td></tr>');
+    $('#todays-workout > tbody').append('<tr><td colspan="4" class="title">'+$('#post_exercise-name option:selected').text() + '</td></tr>');
     $('.selected').each(function(index) {
         $( this ).toggleClass('selected');
         var row = $(this).clone();
