@@ -10,7 +10,12 @@
         </li>
         <li>
           <label for="exercise-name">Exercise Name</label>
-          <%= select("post", "exercise-name", @exercises.collect {|p| [ p.name, p.id ] }, { include_blank: true, :class => "watch-for-change" }) %>
+          <select id="post_exercise-name" name="post[exercise-name]" class="watch-for-change">
+            <option value=""></option>
+            <% @exercises.each do |exercise | %>
+              <option value="<%= exercise.id %>" data-machine-weight="<%= exercise.machine_weight %>" data-split="<%= exercise.split %>"><%= exercise.name %></option>
+            <% end %>
+          </select>
         </li>
         <li>
           <label for="one-rep-max">One Rep Max</label>

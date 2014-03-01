@@ -36,10 +36,10 @@ exercises = [
     ["Reverse Tricep Pushdowns", 0, false, false],
     ["Seated Cable Row Curls", 0, false, false]
 ]
-exercises.each do |exercise|
-  exercise = Exercise.where(name: exercise[0]).first_or_initialize
-  exercise.machine_weight = exercise[1]
-  exercise.split = exercise[2]
-  exercise.record_per_dumbbell = exercise[3]
+exercises.each do |exercise_seed|
+  exercise = Exercise.where(name: exercise_seed[0]).first_or_initialize
+  exercise.machine_weight = exercise_seed[1]
+  exercise.split = exercise_seed[2]
+  exercise.record_per_dumbbell = exercise_seed[3]
   exercise.save
 end

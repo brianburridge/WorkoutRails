@@ -31,6 +31,8 @@ $(".watch-for-change" ).change(function() {
     var reps = $('#reps').val();
     var repsWeight = $('#rep-weight').val();
     var oneRepMax = $('#one-rep-max').val();
+    $('#machine-weight').val($('#post_exercise-name').find('option:selected').attr('data-machine-weight'));
+    $('#split').prop('checked', $('#post_exercise-name').find('option:selected').attr('data-split') == 'true');
     if (reps != "" && repsWeight != "") {
         oneRepMax = Math.round(repsWeight / (1.013 - (0.0267123 * reps)));
         $('#one-rep-max').val(oneRepMax);
