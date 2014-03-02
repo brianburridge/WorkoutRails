@@ -1,7 +1,6 @@
 <div class="container">
   <div id="chart-entry">
     <h1>Gym Weight Lifting Chart</h1>
-
     <form id="exercise-values">
       <ul>
         <li>
@@ -48,6 +47,8 @@
     </form>
   </div>
   <h2>Today's Workout</h2><button class="btn btn-primary btn-link" type="button" id="print-workout">Print Workout</button>
+  <h4>Date: <%= Date.today.strftime('%b %d, %Y') %></h4>
+
   <table id="todays-workout" class="table table-bordered table-striped">
     <thead>
     <tr class="header">
