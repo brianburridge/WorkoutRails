@@ -10,7 +10,7 @@ User.where(first_name: 'Brandon').first_or_create
 
 # name, machine weight, split, record per dumbbell
 exercises = [
-    ["Cable Rows", 0, false, false],
+    ["Close Grip Cable Rows", 0, false, false],
     ["Close Grip Pulldowns", 0, false, false],
     ["Wide Grip Lat Pulldowns", 0, false, false],
     ["Dumbbell Pullovers", 0, true, false],
