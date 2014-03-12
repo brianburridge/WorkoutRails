@@ -11,10 +11,13 @@ User.where(first_name: 'Brandon').first_or_create
 # name, machine weight, split, record per dumbbell
 exercises = [
     ["Barbell Squat", 45, true, false],
+    ["Barbell Deadlift", 45, true, false],
+    ["Smith Narrow Squats", 15, true, false],
+    ["Smith Chair Squats", 15, true, false],
     ["Close Grip Cable Rows", 0, false, false],
     ["Close Grip Pulldowns", 0, false, false],
     ["Wide Grip Lat Pulldowns", 0, false, false],
-    ["Behind the Head Lat Pulldpwn", 0, false, false],
+    ["Behind the Head Lat Pulldown", 0, false, false],
     ["Kneeling Crossover Cable Lat Pulldown", 0, true, false],
     ["Wide Grip Cable Row", 0, false, false],
     ["Dumbbell Pullovers", 0, true, false],
