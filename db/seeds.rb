@@ -48,7 +48,8 @@ exercises = [
     ["Seated Cable Row Curls", 0, false, false],
     ["Smith Chair Squats", 15, true, false],
     ["Smith Narrow Squats", 15, true, false],
-    ["Barbell Deadlift", 45, true, false]
+    ["Barbell Deadlift", 45, true, false],
+    ["Ex Bar Supermans", 30, true, false]
 ]
 exercises.each do |exercise_seed|
   exercise = Exercise.where(name: exercise_seed[0]).first_or_initialize
