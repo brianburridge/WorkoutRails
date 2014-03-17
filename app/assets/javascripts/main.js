@@ -11,6 +11,7 @@ $( document ).ready(function() {
 });
 
 $('#print-workout').click(function () {
+    $('h3 span.muscle_groups').text($('#post_muscles option:selected').val());
     $('#chart-entry').toggle();
 })
 $('input#add').click(function () {

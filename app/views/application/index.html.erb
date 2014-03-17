@@ -8,6 +8,10 @@
           <%= select("post", "user_id", @users.collect {|p| [ p.first_name, p.id ] }, { include_blank: true }) %>
         </li>
         <li>
+          <label for="user">Muscle Group(s)</label>
+          <%= select("post", "muscles", %w(Back Chest Arms Legs Shoulders), { include_blank: true }) %>
+        </li>
+        <li>
           <label for="exercise-name">Exercise Name</label>
           <select id="post_exercise-name" name="post[exercise-name]" class="watch-for-change">
             <option value=""></option>
@@ -47,6 +51,7 @@
     </form>
   </div>
   <h2>Today's Workout</h2><button class="btn btn-primary btn-link" type="button" id="print-workout">Print Workout</button>
+  <h3>Muscle Group(s): <span class="muscle_groups"></span></h3>
   <h4>Date: <%= Date.today.strftime('%b %d, %Y') %></h4>
 
   <table id="todays-workout" class="table table-bordered table-striped">
