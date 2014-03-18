@@ -1,12 +1,14 @@
 ruby   '1.9.3'
 
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
+gem 'capistrano', '~> 2'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
 gem 'kaminari', '0.14.1'
 gem 'pg',                 '~>0.16'
 gem 'rails', '4.0.2'
+gem 'rubber', '~> 2'
 gem 'turbolinks' # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'unicorn'
 
@@ -47,3 +49,7 @@ group :test do
   gem "shoulda", "2.11.3"
 end
 
+
+group :production do
+  gem 'therubyracer', :require => false  # javascript for pre-compiling assets on the server
+end
