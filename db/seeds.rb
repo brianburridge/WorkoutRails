@@ -27,6 +27,7 @@ exercises = [
     ["Dumbbell Lateral Raise", 0, true, false],
     ["Incline Barbell Press", 45, true, false],
     ["Dumbbell Incline Flyes with Twist", 0, true, false],
+    ["Dumbbell Flyes with Twist", 0, true, false],
     ["Dumbbell Flyes", 0, true, false],
     ["Smith Squats", 15, true, false],
     ["Narrow Leg Press", 167, true, false],
