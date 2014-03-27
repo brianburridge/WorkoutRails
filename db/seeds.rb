@@ -54,6 +54,8 @@ exercises = [
     ["Smith Chair Squats", 15, true, false],
     ["Smith Narrow Squats", 15, true, false],
     ["Barbell Deadlift", 45, true, false],
+    ["Barbell Stiff Legged Deadlifts", 45, true, false],
+    ["Leg Press", 167, true, false],
     ["Ex Bar Supermans", 30, true, false]
 ]
 exercises.each do |exercise_seed|
