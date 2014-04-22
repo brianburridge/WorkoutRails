@@ -1,12 +1,12 @@
 $( document ).ready(function() {
-    $.each([ 15, 12, 10, 8 ], function( repIndex, repValue ) {
+    $.each([ 15, 12, 10, 8, 6 ], function( repIndex, repValue ) {
         $.each([ 5, 4, 3, 2, 1, 0 ], function( sofIndex, sofValue ) {
             $('table#chart > tbody').append('<tr class="selectable"><td>' + repValue + '</td><td class="sof-column">' + sofValue + '</td><td id="' + repValue + '-' + sofValue + '-weight"></td><td id="' + repValue + '-' + sofValue + '-weight-to-add"></td><td id="' + repValue + '-' + sofValue + '-split"></td></tr>');
         });
     });
 
     $('.selectable').click(function() {
-        $( this ).toggleClass('selected');
+        $(this).toggleClass('selected');
     });
 });
 
@@ -40,7 +40,7 @@ $(".watch-for-change" ).change(function() {
     }
     var machineWeight = $('#machine-weight').val();
 
-    $.each([ 15, 12, 10, 8 ], function( repIndex, repValue ) {
+    $.each([ 15, 12, 10, 8, 6 ], function( repIndex, repValue ) {
         $.each([ 5, 4, 3, 2, 1, 0 ], function( sofIndex, sofValue ) {
             var targetReps = repValue + sofValue;
             var pctOfMax = .5;
