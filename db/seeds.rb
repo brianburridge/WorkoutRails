@@ -72,7 +72,14 @@ exercises = [
     ["Smith Tricep Press", 15, true, false],
     ["Barbell Concentration Curls", 30, true, false],
     ["Tate Press", 0, true, false],
-    ["High Double Pulley Curls", 0, true, false]
+    ["High Double Pulley Curls", 0, true, false],
+    ["Seated Dumbbell Lateral Raise", 0, true, false],
+    ["Dumbbell Close Grip Press", 0, false, false],
+    ["Bentover Rear Delt Cable Flyes", 0, true, false],
+    ["Dumbbell Incline Press", 0, true, false],
+    ["Flat Flyes - Pause Over Delt", 0, true, false],
+    ["Incline Dumbbell Hammer Curls", 0, true, false],
+    ["High Pulldown Curls", 0, false, false]
 ]
 exercises.each do |exercise_seed|
   exercise = Exercise.where(name: exercise_seed[0]).first_or_initialize
